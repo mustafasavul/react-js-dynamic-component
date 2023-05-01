@@ -1,0 +1,16 @@
+.vertical-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.top {
+  align-items: flex-start;
+}
+
+.center {
+  align-items: center;
+}
+
+.bottom {
+  align-items: flex-end;
+}

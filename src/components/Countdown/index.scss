@@ -1,0 +1,47 @@
+.countdown {
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  &Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 2px;
+    width: 70px;
+    height: 70px !important;
+    background: #0c0b0b;
+    border: 1px solid #FFCCAF;
+    border-radius: 6px;
+    color: #ffffff;
+
+    &Time {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &Unit {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 18px;
+}
