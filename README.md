@@ -21,7 +21,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd react-js-dynamic-component
 ```
 
 Install required packages
