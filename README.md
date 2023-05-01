@@ -3,6 +3,7 @@
 
 This project is prepared simply to show that a certain JSON Component structure will be dynamically rendered on a page by parsing it in React.js. Don't take rules like CSS syntax seriously. Those parts should be shaped according to your wishes in your project.
 
+You can make nested components. You can shape it with your own container and grid structure.
 
 ## Libraries I Use
 
@@ -35,4 +36,13 @@ Run the server
   yarn dev, npm run dev
 ```
 
+#ReactJS,
+#JSON,
+#UIcomponents,
+#DynamicRendering,
+#ComponentHierarchy,
+#CustomizableStyling,
+#FlexibleLayout,
+#ReusableCode,
+#ComponentLibrary
   
