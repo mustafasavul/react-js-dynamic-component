@@ -1,28 +1,62 @@
-import React from "react";
-import s from "./index.scss?inline";
-import cx from "classnames";
+import React from 'react';
+import {HorizontalListProps} from "./props";
 
-const HorizontalList = (props) => {
-    const  {children, style, custom = {}, ...rest} = props;
+const HorizontalList: React.FC<HorizontalListProps> = (props) => {
+  const { children, style = {}, custom = {}, ...rest } = props;
 
-    const { horizontalAlignment } = custom;
+  const { verticalAlignment = 'center', horizontalAlignment = 'center', interItemSpacing, isScrollable = false } = custom;
 
-    const customStyles = {};
+  const { aspectRatio, weight, width, height } = style;
 
-    const className = cx(
-        s.horizontalList,
-        {
-            [s.left]: horizontalAlignment === "left",
-            [s.center]: horizontalAlignment === "center",
-            [s.right]: horizontalAlignment === "right",
-        }
-    );
+  const justifyContent = horizontalAlignment === 'left'
+      ? 'flex-start'
+      : horizontalAlignment === 'center'
+          ? 'center'
+          : horizontalAlignment === 'right'
+              ? 'flex-end'
+              : undefined;
 
-    return (
-        <div className={className} style={{ ...style, ...customStyles }} {...rest}>
-            {children}
-        </div>
-    );
+  const verticalContentAlignment = verticalAlignment === 'top'
+      ? 'flex-start'
+      : horizontalAlignment === 'center'
+          ? 'center'
+          : horizontalAlignment === 'bottom'
+              ? 'flex-end'
+              : undefined;
+
+  const gapValue = typeof interItemSpacing === 'number' ? `${interItemSpacing}px` : interItemSpacing;
+
+  const customStyles: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent,
+    alignItems: verticalContentAlignment,
+    gap: gapValue,
+    overflowY: isScrollable ? 'scroll' : 'auto',
+    overflowX: isScrollable ? 'auto' : 'auto',
+  };
+
+  const combinedStyles = { ...style, ...customStyles };
+
+  const { ...otherProps } = rest;
+
+  return (
+      <div style={combinedStyles} {...otherProps} data-compName="HorizontalList">
+        {children}
+      </div>
+  );
+};
+
+HorizontalList.defaultProps = {
+  children: null,
+  style: {},
+  custom: {
+    verticalAlignment: 'center',
+    horizontalAlignment: 'center',
+    interItemSpacing: '0px',
+    isScrollable: false,
+  },
 };
 
 export default HorizontalList;

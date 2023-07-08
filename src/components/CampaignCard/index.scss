@@ -6,13 +6,15 @@
   padding: 20px;
   border-radius: 8px;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #333333;
 }
 
 .price {
@@ -25,40 +27,72 @@
 .stockInfo {
   font-size: 14px;
   color: #757575;
+  margin-top: 5px;
 }
 
 .productOriented {
-
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .campaignOriented {
-
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .campaignText {
-
+  font-size: 16px;
+  color: #666666;
+  margin-top: 10px;
 }
 
 .productName {
-
+  font-size: 18px;
+  color: #333333;
+  margin-top: 10px;
 }
 
 .reviewsInfo {
-
+  font-size: 14px;
+  color: #757575;
+  margin-top: 5px;
 }
 
 .originalPrice {
-
+  font-size: 16px;
+  color: #999999;
+  text-decoration: line-through;
+  margin-top: 5px;
 }
 
-.finalPriceOnSale{
-
+.finalPriceOnSale {
+  font-size: 18px;
+  color: #ff5722;
+  margin-top: 5px;
 }
 
-.premiumPrice{
-
+.premiumPrice {
+  font-size: 16px;
+  color: #ff9800;
+  margin-top: 5px;
 }
 
-.button{
+.button {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff5722;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
 
+.button:hover {
+  background-color: #e64a19;
 }

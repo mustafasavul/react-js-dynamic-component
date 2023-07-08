@@ -1,4 +1,4 @@
-export function  baseParser(baseProps) {
+export function baseParser(baseProps) {
     const {
         tapAction,
         analytics,
